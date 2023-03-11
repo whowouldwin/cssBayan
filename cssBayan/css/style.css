@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: "Font Awesome 5 Free", serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrapper {
+    max-width: 80vh;
+    padding: 0 20px;
+}
+.wrapper .parent__wrapper {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
