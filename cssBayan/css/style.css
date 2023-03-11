@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: "Font Awesome 5 Free", serif;
+    color: #595858;
 }
 body {
     display: flex;
@@ -10,10 +11,47 @@ body {
 }
 .wrapper {
     max-width: 80vh;
-    padding: 0 20px;
+    padding: 0 1.5rem;
+    margin: 0 auto;
 }
 .wrapper .parent__wrapper {
-    margin-bottom: 8px;
-    border-radius: 3px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.3);
+}
+.wrapper .parent__wrapper label {
+    padding: 0.7rem 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    z-index: 90;
+    transition: all 0.5s ease-in;
+}
+.parent__wrapper input:checked ~ label {
+    border-radius: 0.3rem 0.3rem 0 0;
+    background: rgba(142, 176, 185, 0.98);
+}
+.wrapper label span {
+    color: #333232;
+    font-weight: bold;
+}
+.parent__wrapper .icon {
+    height: 30%;
+    width: 30%;
+    font-size: 1.5rem;
+    padding-left: 20%;
+}
+.content {
+    width: 100%;
+    padding: 0 1rem; ;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
