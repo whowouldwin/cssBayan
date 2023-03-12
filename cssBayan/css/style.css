@@ -55,3 +55,20 @@ img {
     max-width: 100%;
     height: auto;
 }
+.parent__wrapper input:checked ~ label .icon_plus {
+    display: none;
+}
+.parent__wrapper input:checked ~ label .icon_plus i {
+    height: 30%;
+    width: 30%;
+    font-size: 1.5rem;
+}
+.parent__wrapper input:not(:checked) ~ label .icon_xmark i {
+    display: none;
+}
+.icon_xmark i,
+.icon_plus i {
+    height: 30%;
+    width: 30%;
+    font-size: 1.5rem;
+}
