@@ -31,6 +31,7 @@ body {
 .parent__wrapper input:checked ~ label {
     border-radius: 0.3rem 0.3rem 0 0;
     background: rgba(142, 176, 185, 0.98);
+    transition: all 0.5s ease-in;
 }
 .wrapper label span {
     color: #333232;
@@ -56,6 +57,7 @@ img {
     height: auto;
 }
 .parent__wrapper input:checked ~ label .icon_plus {
+    transition: all 0.5s ease-in;
     display: none;
 }
 .parent__wrapper input:checked ~ label .icon_plus i {
@@ -71,4 +73,17 @@ img {
     height: 30%;
     width: 30%;
     font-size: 1.5rem;
+}
+.wrapper .parent__wrapper .content {
+    transition: all 0.5s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    border-radius:  0 0 0.3rem 0.3rem;
+}
+.parent__wrapper input:checked ~ .content {
+    max-height: 100vh;
+}
+input[type="radio"] {
+    display: none;
 }
