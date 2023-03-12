@@ -90,3 +90,19 @@ img {
 input[type="radio"] {
     display: none;
 }
+
+/* Styles for mobile devices with a width of 321px to 819px (tablets) */
+@media only screen and (min-width: 321px) and (max-width: 819px) {
+    /* Your styles for tablets here */
+    header {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styles for desktop devices with a width of 820px and above */
+@media only screen and (min-width: 820px) {
+    /* Your styles for desktops here */
+    header {
+        font-size: 2rem;
+    }
+}
