@@ -89,6 +89,13 @@ input {
     width: 0;
     height: 0;
 }
+.parent__wrapper:hover {
+    background-color: #cbc7c7;
+}
+
+.parent__wrapper:active {
+    background-color: #5b9ff1;
+}
 
 :checked ~ .content__image img {
     width: 80%;
