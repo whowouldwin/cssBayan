@@ -2,11 +2,20 @@
     box-sizing: border-box;
     font-family: "Font Awesome 5 Free", serif;
     color: #595858;
+    font-weight: 800;
 }
+
 header {
     font-size: 0.55rem;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
 }
+.content__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -15,14 +24,17 @@ header {
     width: 70%;
     margin: 0 auto;
 }
+
 .wrapper .parent__wrapper {
     margin-bottom: 0.5rem;
     border-radius: 0.3rem;
     box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.3);
 }
+
 .parent__wrapper {
     width: 100%;
 }
+
 .parent__wrapper .tab__item {
     cursor: pointer;
     padding: 0.7rem 1.3rem;
@@ -34,18 +46,21 @@ header {
     min-height: 2rem;
     border-radius: 0.3rem;
 }
+
 .content__image {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
 .content__image img {
     opacity: 0;
     width: 0;
     height: 0;
     transition: 0.5s;
 }
+
 .content__tools {
     width: 80%;
     display: flex;
@@ -53,37 +68,83 @@ header {
     justify-content: space-between;
     margin: 0.5rem;
 }
+
 .toggle {
     width: 1rem;
     opacity: 0;
     transition: 0.5s;
 }
+
 .toggle img {
     width: 1.5rem;
 }
+
 img {
     width: 100%;
     height: 100%;
 }
+
 input {
     opacity: 0;
     width: 0;
     height: 0;
 }
+
 :checked ~ .content__image img {
     width: 80%;
     height: 80%;
     opacity: 1;
     margin-bottom: 1.5rem;
 }
+:checked ~ .content__tools {
+    font-weight: 600;
+    transform: scale(1.1);
+}
+.toggle {
+    opacity: 1;
+    width: 0.8rem;
+}
+:checked ~ .content__tools .toggle {
+    transform: rotate(45deg);
+}
 
 
+/* Styles for mobile devices with a width of 321px to 819px (tablets) */
+@media only screen and (min-width: 321px) and (max-width: 819px) {
+    /* Your styles for tablets here */
+    header {
+        font-size: 0.8rem;
+    }
+}
+
+/* Styles for desktop devices with a width of 820px and above */
+@media only screen and (min-width: 820px) {
+    /* Your styles for desktops here */
+    header {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .parent__wrapper:hover .content__image {
+        background: #595858;
+        padding: 2rem 2rem;
+        height: 100%;
+    }
+    .tab__item:hover .content__image img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        opacity: 1;
+        margin-bottom: 1.5rem;
+    }
+    .tag__item:hover .content__tools .toggle {
+        transform: rotate(45deg);
+        opacity: 1;
+
+    }
+}
 
 
-
-
-
-
+/*______*/
 /*.parent__wrapper input:checked ~ label {*/
 /*    border-radius: 0.3rem 0.3rem 0 0;*/
 /*    background: rgba(142, 176, 185, 0.98);*/
