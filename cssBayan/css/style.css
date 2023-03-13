@@ -78,7 +78,7 @@ header {
 }
 
 .toggle img {
-    width: 1.5rem;
+    width: 0.8rem;
 }
 
 img {
@@ -127,6 +127,9 @@ input {
     .content__title {
         font-size: 1rem;
     }
+    .toggle img {
+        width: 1.2rem;
+    }
 }
 
 /* Styles for desktop devices with a width of 820px and above */
@@ -158,6 +161,9 @@ input {
     }
     .content__title {
         font-size: 1.3rem;
+    }
+    .toggle img {
+        width: 1.5rem;
     }
 }
 
